@@ -1,0 +1,35 @@
+.projects{
+
+    width: 105%;
+    background-color: lightskyblue;
+    padding-bottom: 5%;
+    padding-top: 2%;
+}
+
+
+.projects h2{
+    font-size: 10vh;
+    margin-left: 10vw;
+}
+
+.works{
+    position: relative;
+    margin: auto;
+    width: 70%;
+    overflow: hidden;
+    /* height: 50vh; */
+    transition-duration: 2s;
+}
+
+.worksToggle{
+
+    position: absolute;
+    bottom: 0;
+    left: 41%;
+    font-size: 100%;
+    background: none;
+    border: none;
+    color: white;
+
+
+}
