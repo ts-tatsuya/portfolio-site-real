@@ -12,9 +12,9 @@ const HighlightsSection: FC<HighlightsSectionProps> = ({}) => {
       <h2 className='animate__animated animate__slideInLeft'>Highlights</h2>
       <div className='animate__animated animate__slideInRight'>
         <div className={styles.works}>
-          <ItemCards title='test' imgUrl='http://placehold.jp/878787/ffffff/200x200.png?text=Sample'/>
-          <ItemCards title='test' imgUrl='http://placehold.jp/878787/ffffff/200x200.png?text=Sample'/>
-          <ItemCards title='test' imgUrl='http://placehold.jp/878787/ffffff/200x200.png?text=Sample'/>
+          <ItemCards title='test' imgUrl='http://placehold.jp/878787/ffffff/200x200.png?text=Sample' destUrl='http://placehold.jp/878787/ffffff/200x200.png?text=Sample'/>
+          <ItemCards title='test' imgUrl='http://placehold.jp/878787/ffffff/200x200.png?text=Sample' destUrl='http://placehold.jp/878787/ffffff/200x200.png?text=Sample'/>
+          <ItemCards title='test' imgUrl='http://placehold.jp/878787/ffffff/200x200.png?text=Sample' destUrl='http://placehold.jp/878787/ffffff/200x200.png?text=Sample'/>
         </div>
       </div>
       
