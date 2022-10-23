@@ -54,7 +54,7 @@ const Home: NextPage = () => {
 
   const dataList = [{
     title: 'Project Dentaku',
-    imgUrl:'/../public/thumbnail/project-dentaku-thumbnail.PNG',
+    imgUrl:'https://i.postimg.cc/9Mrz53cV/project-dentaku-thumbnail.png',
     destUrl:'https://github.com/ts-tatsuya/dentaku-app'
   }];
 

@@ -15,7 +15,7 @@ const ItemCards: FC<ItemCardsProps> = ({title, imgUrl, destUrl}) => {
     <button className={styles.card}>
       <a href={destUrl}>
       {imgUrl.match(/https:|http:/) ? 
-       <img src={imgUrl}></img> : <Image src={imgUrl} width='200px' height='200px'></Image>}
+       <img src={imgUrl} width='200px' height='200px'></img> : <Image src={imgUrl} width='200px' height='200px'></Image>}
       {/* <img src={imgUrl}></img> */}
       <h4>{title}</h4>
      </a>
