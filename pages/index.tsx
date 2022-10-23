@@ -7,7 +7,6 @@ import HighlightsSection from '../Components/highlights-section'
 import ProfileSection from '../Components/profile-section'
 import ProjectSections from '../Components/project-sections'
 import WelcomeSection from '../Components/welcome-section'
-
 import styles from '../styles/Home.module.css'
 import { format } from 'path'
 
@@ -19,12 +18,45 @@ const Home: NextPage = () => {
     }
   });
 
-  const sampleData = {
+  const sampleData = [{
 
     title: 'Sample',
-    imgUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample'
+    imgUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample',
+    destUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample'
+  },
+  {
 
-  };
+    title: 'Sample',
+    imgUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample',
+    destUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample'
+
+  },
+  {
+
+    title: 'Sample',
+    imgUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample',
+    destUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample'
+
+  },{
+
+    title: 'Sample',
+    imgUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample',
+    destUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample'
+
+  },
+  {
+
+    title: 'Sample',
+    imgUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample',
+    destUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample'
+
+  }];
+
+  const dataList = [{
+    title: 'Project Dentaku',
+    imgUrl:'/../public/thumbnail/project-dentaku-thumbnail.PNG',
+    destUrl:'https://github.com/ts-tatsuya/dentaku-app'
+  }];
 
 
   return (
@@ -39,7 +71,8 @@ const Home: NextPage = () => {
         <WelcomeSection/>
         <ProfileSection/>
         <HighlightsSection/>
-        <ProjectSections title='Test' items={[sampleData, sampleData, sampleData, sampleData, sampleData]}/>
+        <ProjectSections title='Web Development'items={dataList}/>
+        <ProjectSections title='SAMPLE SHOW MORE LESS'items={sampleData} bgColor='#fc8803'/>
       </main>
 
       <footer className={styles.footer}>

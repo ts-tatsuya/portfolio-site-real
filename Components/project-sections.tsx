@@ -9,33 +9,38 @@ import ItemCards from './item-cards';
 
 interface Item{
   title: string,
-  imgUrl: string
+  imgUrl: string,
+  destUrl: string
 }
 
 interface ProjectSectionsProps {
 
   title: string,
-  items: Item[]
+  items: Item[],
+  bgColor?: string
 
 }
 const defaultProps: ProjectSectionsProps = {
   title: 'Sample',
   items: [{
     title: 'Sample',
-    imgUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample'
+    imgUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample',
+    destUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample'
   },
   {
     title: 'Sample',
-    imgUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample'
+    imgUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample',
+    destUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample'
   },
   {
     title: 'Sample',
-    imgUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample'
+    imgUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample',
+    destUrl: 'http://placehold.jp/878787/ffffff/200x200.png?text=Sample'
   }]
 }
 
 
-const ProjectSections: FC<ProjectSectionsProps> = ({title, items}) => {
+const ProjectSections: FC<ProjectSectionsProps> = ({title, items, bgColor}) => {
 
   const [worksIsExpanded, setWorksIsExpanded] = useState(false);
 
@@ -68,16 +73,25 @@ const ProjectSections: FC<ProjectSectionsProps> = ({title, items}) => {
       items: 1
     }
   };
+  const customStyle = {
+    backgroundColor: bgColor
+  };
   
 
   return (
-    <div className={styles.projects}>
+    <div className={styles.projects} style={bgColor ? customStyle : {}}>
       <h2 className='animate__animated animate__slideInLeft'>{title}</h2>
       <div className='animate__animated animate__slideInRight'>
         <div className={styles.works} style={worksIsExpanded? {maxHeight: 1000}: {maxHeight: 365}}>
-          <button className={styles.worksToggle} onClick={() => worksExpand()}>{worksIsExpanded? "Show Less": "Show More"}</button>
+          {(items.length > 3) ?
+            <button className={styles.worksToggle} onClick={() => worksExpand()}>
+              {worksIsExpanded? "Show Less": "Show More"}
+            </button> : 
+            <div></div>
+          }
+          
           {items.map(item => (
-            <ItemCards key="{item}" title={item.title} imgUrl={item.imgUrl}/>
+            <ItemCards key='{item}' title={item.title} imgUrl={item.imgUrl} destUrl={item.destUrl}/>
           ))}
         </div>
       </div>

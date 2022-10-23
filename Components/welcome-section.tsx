@@ -9,10 +9,10 @@ interface WelcomeSectionProps {
 const WelcomeSection: FC<WelcomeSectionProps> = ({}) => {
   return (
     <div className={styles.title}>
-      <label className={styles.switch}>
+      {/* <label className={styles.switch}>
         <input type="checkbox"/>
         <span className={styles.slider}></span>
-      </label>
+      </label> */}
       <h1 className='animate__animated animate__slideInLeft'>My</h1>
       <h1 className='animate__animated animate__slideInRight animate__delay-1s'>Personal Sites</h1>
     </div>
