@@ -13,7 +13,7 @@ interface ItemCardsProps {
 const ItemCards: FC<ItemCardsProps> = ({title, imgUrl, destUrl}) => {
   return (
     <button className={styles.card}>
-      <a href={destUrl}>
+      <a href={destUrl} target='_blank'>
       {imgUrl.match(/https:|http:/) ? 
        <img src={imgUrl} width='200px' height='200px'></img> : <Image src={imgUrl} width='200px' height='200px'></Image>}
       {/* <img src={imgUrl}></img> */}

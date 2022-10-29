@@ -52,10 +52,31 @@ const Home: NextPage = () => {
 
   }];
 
-  const dataList = [{
+  const dataListWeb = [{
     title: 'Project Dentaku',
     imgUrl:'https://i.postimg.cc/9Mrz53cV/project-dentaku-thumbnail.png',
     destUrl:'https://github.com/ts-tatsuya/dentaku-app'
+  },
+  {
+    title:'Portfolio Site',
+    imgUrl:'https://i.postimg.cc/9QV94H0t/image.png',
+    destUrl:'https://amadeus-ariadi-portfolio-site-app.vercel.app/'
+  },
+  {
+    title:'Public Photo App',
+    imgUrl:'https://i.postimg.cc/FR2kTq4T/image.png',
+    destUrl:'https://github.com/ts-tatsuya/public-photo-app'
+  },
+  {
+    title:'Public Photo App (Backend)',
+    imgUrl:'https://i.postimg.cc/FR2kTq4T/image.png',
+    destUrl:'https://github.com/ts-tatsuya/public-photo-app-backend'
+  }
+  ];
+  const dataListGame = [{
+    title: 'A Certain Girl Transported Into Another World',
+    imgUrl:'https://i.postimg.cc/xCQccKtx/image.png',
+    destUrl:'https://drive.google.com/file/d/1UCukEjWN1xIjJLRb37C9tO_LHkqYd7Ds/view?usp=share_link'
   }];
 
 
@@ -71,8 +92,9 @@ const Home: NextPage = () => {
         <WelcomeSection/>
         <ProfileSection/>
         <HighlightsSection/>
-        <ProjectSections title='Web Development'items={dataList}/>
-        <ProjectSections title='SAMPLE SHOW MORE LESS'items={sampleData} bgColor='#fc8803'/>
+        <ProjectSections title='Web Development'items={dataListWeb}/>
+        <ProjectSections title='Game Development'items={dataListGame} bgColor='#f7fa32'/>
+        {/* <ProjectSections title='Show More / Less Showcase'items={sampleData} bgColor='#fc8803'/> */}
       </main>
 
       <footer className={styles.footer}>
