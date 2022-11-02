@@ -77,6 +77,11 @@ const Home: NextPage = () => {
     title: 'A Certain Girl Transported Into Another World',
     imgUrl:'https://i.postimg.cc/xCQccKtx/image.png',
     destUrl:'https://drive.google.com/file/d/1UCukEjWN1xIjJLRb37C9tO_LHkqYd7Ds/view?usp=share_link'
+  },
+  {
+    title: 'Shooting Otaku',
+    imgUrl:'https://i.postimg.cc/3RMVYb0j/image.png',
+    destUrl:'https://kurisuamadeus.itch.io/syuutiota'
   }];
 
 
